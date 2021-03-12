@@ -62,5 +62,14 @@ class System extends Generic\AbstractEntity {
       return [];
     }))->setCheckPermissions($checkPermissions);
   }
+  
+  /**
+  * @param bool $checkPermissions
+  * @return Action\System\ResetPaths
+  */
+  public static function resetPaths($checkPermissions = TRUE) {
+    return (new Action\System\ResetPaths(__CLASS__, __FUNCTION__))
+      ->setCheckPermissions($checkPermissions);
+  }
 
 }
